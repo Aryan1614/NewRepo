@@ -25,5 +25,4 @@ test("Initials of comment form",() => {
     expect(commentBtnEle).toBeDisabled();
     fireEvent.change(commentInput,{target:{value: "abc"}});
     expect(commentBtnEle).toBeEnabled();
-})
-
+});

@@ -4,14 +4,14 @@ const CommentList = ({commentlist}) => {
   return (
     <div>
         {
-            commentlist?.length === 0 ? <h1 data-testid="empty">"Not Comments Found!"</h1> : (
-                <div>
+            commentlist?.length === 0 ? <h1 data-testid="empty">No Comments Found!</h1> : (
+                <ul>
                     {
-                        commentlist.map((comment,index)=>(
-                            <div key={index}>{comment}</div>
+                        commentlist.map((comment)=>(
+                            <li key={comment?.id}>{comment?.comment}</li>
                         ))
                     }
-                </div>
+                </ul>
             )
         }
     </div>

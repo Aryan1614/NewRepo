@@ -1,15 +1,16 @@
+import { useState } from 'react';
 import './App.css';
 import CommentForm from './components/CommentForm';
 import CommentList from './components/CommentList';
 
 function App() {
-  let commentlist = ["hello","aryan"];
+  const[comments,setComments] = useState([]);
   return (
     <div data-testid="myrootdiv">
-      <CommentForm />
+      <CommentForm setComments={setComments} comments={comments} />
       <br/>
       <br/>
-      <CommentList commentlist={commentlist} />
+      <CommentList commentlist={comments}  />
     </div>
   );
 }
